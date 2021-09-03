@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sign in to Heliff">
+    <meta name="author" content="">
+
+    {% block title %}
+        <title>Login - Heliff</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body id="login">
+
+<!-- Page Content -->
+
+<div class="signin-container">
+    <div class="signin-wrapper">
+        <div class="signin-section">
+            <div class="signin-form-container">
+                <div class="signin-form-wrapper">
+                    <div class="mb-3">
+                        <a href="/"><span>Heliff</span></a>
+                    </div>
+
+                    <div id="signin-form" class="signin-form">
+                        <form method="post" action="login" id="signin">
+                            <label for="username">Username</label>
+                            <input name="username" id="username" required pattern="[a-zA-Z0-9_]{3,25}" type="text">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" required>
+                            <small><a href="/forgot">Forgot password?</a></small>
+                            <button class="btn" id="login_button">Sign in</button>
+
+                            <div class="text-small">
+                                Don't have an account? <a href="/login" class="login">Sign up</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="signin-section">
+            <div class="signin-image-container">
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
